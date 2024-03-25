@@ -17,19 +17,4 @@ public class Model:Entity<Guid>
 
     public virtual Brand? Brand { get; set; }
 
-
-    public Model()
-    {
-     
-    }
-
-    public Model(Guid id, Guid brandId, Guid fuelId, Guid transmissionId, string name, decimal dailyPrice, string imageUrl) : this()
-    {
-        Id = id;
-        BrandId = brandId;
-        Name = name;
-        DailyPrice = dailyPrice;
-        ImageUrl = imageUrl;
-
-    }
 }

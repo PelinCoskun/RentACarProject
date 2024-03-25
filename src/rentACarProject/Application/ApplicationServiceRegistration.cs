@@ -19,6 +19,7 @@ using NArchitecture.Core.Localization.Resource.Yaml.DependencyInjection;
 using NArchitecture.Core.Mailing;
 using NArchitecture.Core.Mailing.MailKit;
 using Application.Services.Brands;
+using Application.Services.Models;
 
 namespace Application;
 
@@ -58,6 +59,7 @@ public static class ApplicationServiceRegistration
         services.AddYamlResourceLocalization();
 
         services.AddScoped<IBrandService, BrandManager>();
+        services.AddScoped<IModelService, ModelManager>();
         return services;
     }
 
